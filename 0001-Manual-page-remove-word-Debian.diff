@@ -1,0 +1,27 @@
+From fad486734e181a9cda748e3fd2610f369cd7e411 Mon Sep 17 00:00:00 2001
+From: Jari Aalto <jari.aalto@cante.net>
+Date: Thu, 13 Mar 2008 14:25:57 +0200
+Subject: [PATCH] Manual page: remove word Debian
+
+Signed-off-by: Jari Aalto <jari.aalto@cante.net>
+---
+ ninvaders.6 |    3 +--
+ 1 files changed, 1 insertions(+), 2 deletions(-)
+
+diff --git a/ninvaders.6 b/ninvaders.6
+index b5d1473..5b22125 100644
+--- a/ninvaders.6
++++ b/ninvaders.6
+@@ -35,8 +35,7 @@ things) before they reach the ground.  Since these aliens aren't friendly
+ descending bullets or hang about under the large stationary blocks for
+ cover.
+ .SH AUTHOR
+-This manual page was written by Matthew Palmer <mpalmer@debian.org>,
+-for the Debian GNU/Linux system (but may be used by others).
++This manual page was written by Matthew Palmer <mpalmer@debian.org>.
+ .PP
+ The ninvaders program was written by Thomas Dettbarn
+ <dettus@matrixx-bielefeld.de> and is released under the GPL.
+-- 
+1.5.3.8
+

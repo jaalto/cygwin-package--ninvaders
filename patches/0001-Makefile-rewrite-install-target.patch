@@ -1,0 +1,61 @@
+From aacfa3c7b26a129edb7980d6b305fec071f2014f Mon Sep 17 00:00:00 2001
+From: Jari Aalto <jari.aalto@cante.net>
+Date: Fri, 14 Mar 2008 13:16:41 +0200
+Subject: [PATCH] Makefile: rewrite install target
+
+Signed-off-by: Jari Aalto <jari.aalto@cante.net>
+---
+ Makefile |   36 ++++++++++++++++++++++++++++++++++--
+ 1 files changed, 34 insertions(+), 2 deletions(-)
+
+diff --git a/Makefile b/Makefile
+index d815e2f..c1c8a63 100644
+--- a/Makefile
++++ b/Makefile
+@@ -8,9 +8,41 @@ OFILES=globals.o view.o aliens.o ufo.o player.o nInvaders.o
+ all:		nInvaders
+ 
+ nInvaders: 	$(OFILES) $(HFILES)
+-		$(CC) $(LDFLAGS) -o$@ $(OFILES) $(LIBS)
++		$(CC) $(LDFLAGS) -o ninvaders $(OFILES) $(LIBS)
+ 
+ .c.o:
+ 		$(CC) -c  -I. $(CFLAGS) $(OPTIONS) $<
+ clean:
+-		rm -f nInvaders $(OFILES)
++		rm -f ninvaders $(OFILES)
++
++PACKAGE		= ninvaders
++DESTDIR		=
++prefix		= /usr
++exec_prefix	= $(prefix)
++man_prefix	= $(prefix)/share
++
++BINDIR		= $(DESTDIR)$(exec_prefix)/bin
++SHAREDIR	= $(DESTDIR)$(prefix)/share/$(PACKAGE)
++MANDIR		= $(DESTDIR)$(man_prefix)/man
++MANDIR6		= $(MANDIR)/man6
++
++INSTALL		= /usr/bin/install
++INSTALL_BIN	= $(INSTALL) -m 755
++INSTALL_DATA	= $(INSTALL) -m 644
++
++INSTALL_OBJS_BIN  = $(PACKAGE)
++INSTALL_OBJS_MAN  = *.6
++
++install-man:
++	# install-man
++	$(INSTALL_BIN) -d $(MANDIR6)
++	$(INSTALL_DATA) $(INSTALL_OBJS_MAN) $(MANDIR6)
++
++install-bin:
++	# install-bin
++	$(INSTALL_BIN) -d $(BINDIR)
++	$(INSTALL_BIN) -s $(INSTALL_OBJS_BIN) $(BINDIR)
++
++install: all install-bin
++
++.PHONY: clean install install-bin install-man
+-- 
+1.5.3.8
+
