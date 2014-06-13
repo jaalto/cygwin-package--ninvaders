@@ -13,7 +13,9 @@ play space invaders when you can't find a GUI? Now you can.
 CHANGES SINCE LAST RELEASE
 ==========================
 
-See /usr/share/doc/ninvaders-*/ChangeLog
+Built with libncursesw10.
+
+See /usr/share/doc/ninvaders*/ChangeLog
 
 INSTALL OR UPGRADE NOTES
 ========================
