@@ -7,12 +7,11 @@ A Space Invaders type game with text-only graphics. Ever wanted to
 play space invaders when you can't find a GUI? Now you can.
 
 Runtime requirements:
-  cygwin
-  libncurses8
+  libncursesw10
 
 Build requirements:
-  cygwin
-  libncurses-devel
+  quilt
+  libncursesw-devel
 
 Canonical homepage:
   http://sourceforge.net/projects/ninvaders
@@ -52,15 +51,19 @@ Build instructions:
 ------------------------------------------
 
 Files included in the binary distribution:
-  See content of *.tar.gz
+  See Cygwin package archive
 
 ------------------------------------------
 
 Port Notes:
 - No manual page. Copied from Debian.
 
+----- version 0.1.1-2 -----
+- New release 2014-06-13 Jari Aalto
+- Compile with libncursesw10
+
 ----- version 0.1.1-1 -----
 - Initial release 2008-03-13 Jari Aalto
 
 Cygwin port maintained by: Jari Aalto <jari.aalto@cante.net>
-Copyright (C) 2008 Jari Aalto; Licensed under GPL v2 or later
+Copyright (C) 2008-2014 Jari Aalto; Licensed under GPL v2 or later
