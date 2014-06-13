@@ -2,4 +2,5 @@ sdesc: "A space invaders-like game using ncurses"
 ldesc: "A Space Invaders type game with text-only graphics. Ever wanted to
 play space invaders when you can't find a GUI? Now you can."
 category: Games
-requires: cygwin libncurses8
+requires: libncursesw10
+
